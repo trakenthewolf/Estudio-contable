@@ -943,10 +943,12 @@ footer {
 
 .menu-icon::before {
     top: -8px;
+    right: 0px;
 }
 
 .menu-icon::after {
     bottom: -8px;
+    right: 1px;
 }
 
 /* Animación del ícono cuando está activo */
@@ -967,6 +969,7 @@ footer {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        background: white;
     }
 
     .nav-links {
