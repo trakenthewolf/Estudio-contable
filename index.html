@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JF Estudio Contable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#contacto" id="contacto-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Modal de contacto -->
+    <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="close">&times;</span>
+            <div class="cards">
+                <a href="" target="_blank" class="card instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="#contacto" class="card formulario">
+                    <span>Formulario</span>
+                </a>
+                <a href="https://wa.link/naop0i" target="_blank" class="card whatsapp">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="inicio" class="hero" data-aos="fade-up">
+            <video autoplay muted loop id="myVideo">
+                <source src="nack.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>JF ESTUDIO CONTABLE</h1>
+                <p>Expertos en contabilidad y finanzas para tu negocio.</p>
+            </div>
+        </section>
+
+        <section id="servicios" data-aos="zoom-in">
+            <h2 class="servicios-titulo">Nuestros Servicios Contables</h2>
+            <div class="servicios-grid">
+                <div class="servicio">
+                    <h3>Contabilidad Financiera</h3>
+                    <p>Gestión de tus finanzas con informes claros y precisos.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Asesoría Fiscal</h3>
+                    <p>Optimización de tus impuestos y cumplimiento normativo.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Auditoría</h3>
+                    <p>Revisión exhaustiva de tus cuentas para garantizar la transparencia.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Planificación Financiera</h3>
+                    <p>Desarrollo de estrategias para el crecimiento sostenible de tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="clientes" style="margin-top: 4rem;" data-aos="slide-up">
+            <div class="clientes-layout">
+                <div class="clientes-info">
+                    <h2 class="clientes-titulo">Nuestros Clientes</h2>
+                    <p class="clientes-descripcion">Desde que empezamos hemos prestado un servicio de confianza a nuestros clientes. Hemos tenido el honor de ser la empresa elegida por las siguientes sociedades:</p>
+                </div>
+                <div class="clientes-lista">
+                    <div class="cliente-card">
+                        <div class="cliente-card-image" style="background-image: url('casavigil.png');"></div>
+                        <h3 class="cliente-card-title">Casa Vigil</h3>
+                        <div class="cliente-card-body">
+                            <p>Casa Vigil ha sido un socio clave en nuestra trayectoria, aportando valor y confianza.</p>
+                        </div>
+                        <div class="cliente-footer">
+                            <span class="cliente-by-name" onclick="openModal('modal1')">Ver más</span>
+                        </div>
+                    </div>
+                    <div class="cliente-card">
+                        <div class="cliente-card-image" style="background-image: url('cliente2.png');"></div>
+                        <h3 class="cliente-card-title">Cliente 2</h3>
+                        <div class="cliente-card-body">
+                            <p>Descripción breve del cliente y su relación con la empresa.</p>
+                        </div>
+                        <div class="cliente-footer">
+                            <span class="cliente-by-name" onclick="openModal('modal2')">Ver más</span>
+                        </div>
+                    </div>
+                    <div class="cliente-card">
+                        <div class="cliente-card-image" style="background-image: url('cliente3.png');"></div>
+                        <h3 class="cliente-card-title">Cliente 3</h3>
+                        <div class="cliente-card-body">
+                            <p>Descripción breve del cliente y su relación con la empresa.</p>
+                        </div>
+                        <div class="cliente-footer">
+                            <span class="cliente-by-name" onclick="openModal('modal3')">Ver más</span>
+                        </div>
+                    </div>
+                    <div class="cliente-card">
+                        <div class="cliente-card-image" style="background-image: url('cliente4.png');"></div>
+                        <h3 class="cliente-card-title">Cliente 4</h3>
+                        <div class="cliente-card-body">
+                            <p>Descripción breve del cliente y su relación con la empresa.</p>
+                        </div>
+                        <div class="cliente-footer">
+                            <span class="cliente-by-name" onclick="openModal('modal4')">Ver más</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" data-aos="flip-left">
+            <h2 style="text-align: center;">Contáctanos</h2>
+            <div class="contacto-container">
+                <form id="formulario-contacto">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Estudio Contable Jorge Ferreira. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modales de clientes -->
+    <div id="modal1" class="client-modal">
+        <div class="client-modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-letter">
+                <p>Casa Vigil ha sido un socio clave en nuestra trayectoria...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="client-modal">
+        <div class="client-modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-letter">
+                <p>Cliente 2 ha trabajado con nosotros en varios proyectos innovadores, destacándose por su compromiso...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="client-modal">
+        <div class="client-modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-letter">
+                <p>Cliente 3 ha sido un aliado estratégico, contribuyendo significativamente a nuestro crecimiento...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="client-modal">
+        <div class="client-modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-letter">
+                <p>Cliente 4 ha demostrado una dedicación excepcional, colaborando en proyectos de alto impacto...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
